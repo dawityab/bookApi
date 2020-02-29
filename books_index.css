@@ -1,0 +1,84 @@
+body
+{
+background-color:#c2f0f0;
+}
+
+#search{
+	text-align: center;
+}
+h2,h4{
+	color:#3399ff;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 10px;
+	border: solid 1px #e6f2ff;
+	/*background-color: #e6f2ff;*/
+	/*font-size: 2.5rem;*/
+
+}
+.input-type{
+		border-radius: 10px;
+		border: solid 1px;
+		padding: 5px;
+		width: 400px;
+	}
+#notify{
+	color: red;
+}
+.submit-btn,.back-btn,#read_book{
+		border:solid 0px #6666ff;
+		box-shadow: 3px;
+		border-radius: 10px;
+		margin: 10px;
+		background-color: #1a8cff;
+		color:  #cce6ff;
+		padding: 5px;
+	}
+	#delete_btnn{
+		border:solid 0px #6666ff;
+		box-shadow: 3px;
+		border-radius: 10px;
+		margin: 10px;
+		background-color:#ff9999 ;
+		color:  #ffffff;
+		padding: 5px;
+	}
+#imgCover{
+	border: 10px solid black;
+	width:200px;
+	height: 300px;
+
+}
+.table-name{
+		text-align:center;
+		border: 0px solid #3399ff;
+		width: 80%;
+
+	}
+	.table-head{
+		background-color: #4775d1;
+		color: #fffff0;
+		padding: 10px; 
+		border: 1px solid  #b3b3ff;
+		font-weight: 900;
+}
+
+tr,th,td {
+	border: solid 1px #b3b3ff;
+	background-color:#7094db ; 
+	color:white;
+	border-radius: 10px;
+}
+.books{
+	margin-top: 20px;
+	margin-left: 30px;
+	border-radius: 10px;
+	box-shadow:5px;
+	width: 100%; 
+	height: auto;
+
+}
+.image-align{
+	text-align: center;
+}

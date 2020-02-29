@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--  Bootstrap cdn link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <!-- Js files and links -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <!-- CSS link file -->
+  <link rel="stylesheet" type="text/css" href="books_index.css">
+  <!--  Google fonts links -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One|Ubuntu&display=swap" rel="stylesheet"> 
+  <title>bookApi</title>
+
+
+</head>
+
+<body>
+ <div class="container-fluid">
+  <section id="search">
+  <div>
+<h2 class="title">Search Books</h2>
+
+<input  class="input-type" type="text" placeholder="Name a Book title or an Author">
+
+
+
+<button type="submit" class="submit-btn">Click</button>
+<button type="submit" class="back-btn">Back</button>
+
+
+<p id="notify"></p>
+
+</div>
+<div class='img_div'> 
+
+</div>
+<div class='totalImg'> 
+
+</div>
+ 
+</div>
+<table class="table-name" align="center">
+  <tr class="table-row">
+    <th class="table-head">Title</th>
+     <th class="table-head">Author</th>
+      <th class="table-head">Cover</th>
+       <th class="table-head">Categories</th>
+        <th class="table-head">Published Date</th>
+         <th class="table-head">Version</th>
+         <th class="table-head">Read</th>
+        
+  </tr>
+</table>
+<!-- <div class="description"></div> -->
+  <div class="image-align">
+ <img class="books" src="pic-1.jpg" alt="Books">
+      </div>
+       </section>
+<script type="text/javascript" src="bookscript.js" ></script>
+
+</body>
+
+</html>
