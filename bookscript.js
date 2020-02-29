@@ -12,7 +12,7 @@ document.addEventListener('keypress', function(event){
 });
 
 function BookInfo(){
-var row = 1
+var row = 1;
 var book = document.querySelector('.input-type').value;
 
 
@@ -20,11 +20,7 @@ if(book)
 {
 $.getJSON("https://www.googleapis.com/books/v1/volumes?q="+book+"&download=epub&key=AIzaSyBvd66buYhTKc1tLG_tpLUOES0IBP0ar6w",function(data){
 
-// var totalItem = data.items[0];
-// var totalImg = [];
-// $.each(totalItem, function(index, value){
-// 	totalImg.push('<span>' + value + '</span>');
-// });
+
 var id = data.items[0].id;
 var title = data.items[0].volumeInfo.title;
 var author = data.items[0].volumeInfo.authors;
@@ -37,7 +33,37 @@ var Read = data.items[0].accessInfo.webReaderLink;
 
 
 var table = document.querySelector('.table-name');
-			var tableRow = table.insertRow(row);
+		var header = table.createTHead(0);
+		
+		var head_row = header.insertRow(0);
+		
+		var head_cell1 = head_row.insertCell(0);
+		var head_cell2 = head_row.insertCell(1);
+		var head_cell3 = head_row.insertCell(2);
+		var head_cell4 = head_row.insertCell(3);
+		var head_cell5 = head_row.insertCell(4);
+		var head_cell6 = head_row.insertCell(5);
+		var head_cell7 = head_row.insertCell(6);
+
+		head_cell1.innerHTML = "Title";
+		head_cell1.id = 'table-head';
+		head_cell2.innerHTML = "Author";
+		head_cell2.id = 'table-head';
+		head_cell3.innerHTML = "Cover";
+		head_cell3.id = 'table-head';
+		head_cell4.innerHTML = "Categories";
+		head_cell4.id = 'table-head';
+		head_cell5.innerHTML = "Published Date";
+		head_cell5.id = 'table-head';
+		head_cell6.innerHTML = "Version";
+		head_cell6.id = 'table-head';
+		head_cell7.innerHTML = "Read";
+		head_cell7.id = 'table-head';
+	
+
+
+		var tableRow = table.insertRow(row);
+
 			var cell1 = tableRow.insertCell(0);
 			var cell2 = tableRow.insertCell(1);
 			var cell3 = tableRow.insertCell(2);
@@ -78,10 +104,11 @@ var delete_btn = document.createElement('button');
 			delete_btn.id = 'delete_btnn';
 			tableRow = cell8.appendChild(delete_btn);
 			$('#delete_btnn').on( 'click ',function(){
+			 (head_row).remove();
 			 $(this).closest ('tr').remove();
 				
 			});
-
+			
 			row ++;
 			
 			init();
@@ -101,7 +128,7 @@ console.log(data);
 else if (!book || book !== title || book !== author)
 	{
 		
-		var message = "* Please fill the require input value before you click";
+		var message = "* Please back to the input and fill the require input value and then press the click button";
 		
 		//console.log(message);
 		//alert('* Please fill the require input.');
@@ -109,9 +136,9 @@ else if (!book || book !== title || book !== author)
 		if(message){
 			$('.submit-btn').hide();
 			$('.back-btn').show();
-			$('.input-type').show();
+			$('.input-type').hide();
 
-			$('.input-type').focus();
+			//$('.input-type').focus();
 
 
 		}
@@ -123,6 +150,8 @@ console.log('It is clicked');
 
 //row ++;
 
+	
+		
 
 
 
